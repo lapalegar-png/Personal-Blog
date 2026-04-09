@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="JQuery/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>The Chronicles of LA</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- NAV/HEADER -->
+    <header class="nav-bar">
+        <nav>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul class="nav__left" id="nav-menu"> 
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>    
+            </ul>
+            <h1><a href="#home">The Chronicles of LA</a></h1>
+            <ul class="nav__right">
+                <li><a href="#projects">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- TOP CAROUSEL -->
+    <div class="top-carousel">
+        <div class="carousel" id="home">
+            <div class="card">
+                <img src="images/_DSC0055.JPG" alt="Story beginning">
+                <p>Every story has a beginning.</p>
+            </div>
+            <div class="card">
+                <img src="images/big3.jpg" alt="Younger self">
+                <p>Before the responsibilities... there was a younger version filled with curiosity, wonder, and simple joys.</p>
+            </div>
+            <div class="card">
+                <img src="images/received_411568990169116.jpeg" alt="Memories collection">
+                <p>This blog is a collection of those moments that quietly shaped who I am becoming.</p>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- ABOUT -->
+        <section class="about" id="about">
+            <h2>About Me</h2>
+            <p>Hi, I'm Luis, a Computer Engineering student passionate about technology, creativity, and personal growth. I enjoy building projects, exploring new ideas, and documenting my journey through this blog.</p>            
+            <p>This space is not just about where I've been—but also about what I'm building and who I'm becoming.</p>        
+        </section>
+
+        <!-- STORY CAROUSEL -->
+        <section class="story" id="story">
+            <h2>Experiences & Life Moments</h2>
+            <div class="f-main">
+                <button class="f-btn f-btn--left" onclick="scrollFamily(-1)">←</button>
+                <div class="f-carousel">
+                    <div class="f-card">
+                        <img src="images/290946053_749212329604014_2291033349010652135_n.jpg" alt="">
+                        <p class="f-caption"></p>
+                    </div>
+                    <div class="f-card">
+                        <img src="images/400859159_373878678424038_868781004554758603_n.jpg" alt="">
+                        <p class="f-caption"></p>
+                    </div>
+                    <div class="f-card">
+                        <img src="images/_DSC0078.JPG" alt="">
+                        <p class="f-caption"></p>
+                    </div>
+                </div>
+                <button class="f-btn f-btn--right" onclick="scrollFamily(1)">→</button>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="projects" id="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Calculator Layout (Java)</h3>
+                    <div class="project-content">
+                        <div class="project-description">
+                            <p>A GUI-based calculator for algebra and trigonometry. Features include basic operations, trigonometry functions, and a clean interface built with Java Swing.</p>
+                        </div>
+                        <div class="project-image">
+                            <img src="images/GUI.png" alt="Calculator Layout">
+                        </div>
+                        <button class="toggle-btn">Close</button>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Gord</h3>
+                    <div class="project-content">
+                        <div class="project-description">
+                            <p>A gaming catalog built using HTML, CSS, and JavaScript. Features game search, filtering by genre, and a responsive card layout for browsing collections.</p>
+                        </div>
+                        <div class="project-image">
+                            <img src="images/GameVault.png" alt="Gord Gaming Catalog">
+                        </div>
+                        <button class="toggle-btn">Close</button>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Future Projects</h3>
+                    <div class="project-content">
+                        <div class="project-description">
+                            <p>More exciting projects coming soon as I continue growing in Computer Engineering. Stay tuned for web apps, tools, and creative coding experiments.</p>
+                        </div>
+                        <div class="project-image">
+                            <img src="images/loading-icon-free-vector.jpg" alt="Future Projects">
+                        </div>
+                        <button class="toggle-btn">Close</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ART GALLERY -->
+        <section class="art" id="art">
+            <h2>Creative Works</h2>
+            <div class="art-grid">
+                <div class="art-card"><img class="carousel__image" src="images/wargreymon.jpg" alt="WarGreymon"></div>
+                <div class="art-card"><img class="carousel__image" src="images/kabuterimon.jpg" alt="Kabuterimon"></div>
+                <div class="art-card"><img class="carousel__image" src="images/angemon.jpg" alt="Angemon"></div>
+                <div class="art-card"><img class="carousel__image" src="images/birdramon.jpg" alt="Birdramon"></div>
+                <div class="art-card"><img class="carousel__image" src="images/tanjiro-orange.jpg" alt="Tanjiro"></div>
+                <div class="art-card"><img class="carousel__image" src="images/zenitsu.jpg" alt="Zenitsu"></div>
+                <div class="art-card"><img class="carousel__image" src="images/jjk.jpg" alt="JJK"></div>
+                <div class="art-card"><img class="carousel__image" src="images/jjk-0.jpg" alt="JJK 2"></div>
+                <div class="art-card"><img class="carousel__image" src="images/kny-mt.jpg" alt="KNY MT"></div>
+                <div class="art-card"><img class="carousel__image" src="images/kny-rld.jpg" alt="KNY RLD"></div>
+                <div class="art-card"><img class="carousel__image" src="images/mha-s6.jpg" alt="MHA S6"></div>
+                <div class="art-card"><img class="carousel__image" src="images/suzuya.jpg" alt="Suzuya"></div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <footer class="footer" id="contact">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h2>The Chronicles of LA</h2>
+                    <p>All rights reserved. &copy; 2025</p>
+                </div>
+                <div class="social-grid">
+                    <a href="mailto:lapalegar@gmail.com" class="social-link" title="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://github.com/yourusername" class="social-link" title="GitHub" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.facebook.com/luis.palegar.9" class="social-link" title="Facebook" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://www.instagram.com/eleyyydesu/?hl=en" class="social-link" title="Instagram" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/luis-palegar-1795433a9/" class="social-link" title="LinkedIn" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- IMAGE MODAL -->
+    <div id="imgModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script src="fp.js"></script>
+</body>
+</html>
